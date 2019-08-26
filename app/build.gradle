@@ -28,5 +28,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     //implement litepal 存储数据
-    implementation 'org.litepal.android:core:1.4.1'
+    implementation 'org.litepal.android:core:2.0.0'
 }

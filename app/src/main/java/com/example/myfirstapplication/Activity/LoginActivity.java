@@ -4,24 +4,46 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import com.example.myfirstapplication.MainActivity;
 import com.example.myfirstapplication.R;
 
 public class LoginActivity extends AppCompatActivity {
+
+    private EditText mEtUsername;
+    private EditText mEtPassword;
+    private Button mBtnLogin;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_activty);
 
-        final Button button = findViewById(R.id.btn_login);
-        button.setOnClickListener(new View.OnClickListener() {
+        mEtUsername = findViewById(R.id.et_username);
+        mEtPassword = findViewById(R.id.et_password);
+
+        mBtnLogin = findViewById(R.id.btn_login);
+        mBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent inten = new Intent();
-                
+                if (!TextUtils.isEmpty(mEtUsername.getText())
+                        && !TextUtils.isEmpty(mEtPassword.getText())) {
+
+                    // 把基础数据存储到MyApplication
+
+                    //　启动主页面
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }else {
+                    Toast.makeText(LoginActivity.this,"请输入正确的账号密码！",Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
