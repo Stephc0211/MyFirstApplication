@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.LoginActivity">
+    tools:context=".Activity.LoginActivity"
+    android:background="@color/colorAccent">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:layout_centerInParent="true"
-        android:background="@color/colorAccent">
+        android:background="#ffffff"
+        >
 
         <TextView
             android:layout_marginStart="30dp"
