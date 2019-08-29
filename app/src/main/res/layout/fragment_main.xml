@@ -100,6 +100,7 @@
             android:gravity="center"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="5dp"
+            android:paddingTop="10dp"
             android:drawableTop="@mipmap/ic_launcher"
             />
 
