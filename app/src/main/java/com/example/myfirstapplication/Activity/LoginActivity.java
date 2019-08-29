@@ -2,12 +2,15 @@ package com.example.myfirstapplication.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.myfirstapplication.MainActivity;
@@ -19,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText mEtPassword;
     private Button mBtnLogin;
 
+    private TextView mTvLoginPgRegister;
 
 
     @Override
@@ -46,5 +50,17 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+        mTvLoginPgRegister = findViewById(R.id.tv_login_page_register);
+        mTvLoginPgRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        }
+
     }
-}
+
