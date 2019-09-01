@@ -29,13 +29,15 @@
             />
 
         <RadioButton
-            android:id="@+id/rb_a"
+            android:id="@+id/rb_ratings"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="A"
+            android:text="作品点评"
+            android:textSize="10sp"
             android:button="@null"
             android:gravity="center"
+            android:drawableTop="@drawable/tab_ratings"
             />
 
         <RadioButton

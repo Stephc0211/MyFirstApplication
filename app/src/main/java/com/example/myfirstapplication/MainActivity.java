@@ -5,22 +5,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.example.myfirstapplication.Activity.LoginActivity;
 import com.example.myfirstapplication.Fragment.MainFragment;
 import com.example.myfirstapplication.Fragment.MineFragment;
 import com.example.myfirstapplication.Fragment.RatingsFragment;
 import com.example.myfirstapplication.Fragment.SellFragment;
-
-import org.litepal.LitePal;
-import org.litepal.tablemanager.Connector;
 
 public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener{
 
@@ -47,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         mFlMainContainer = findViewById(R.id.fl_main_container);
         mRgMain = findViewById(R.id.rg_main);
         mRbHome = findViewById(R.id.rb_home);
-        mRbRatings = findViewById(R.id.rb_a);
+        mRbRatings = findViewById(R.id.rb_ratings);
         mRbSell = findViewById(R.id.rb_b);
         mRbMine = findViewById(R.id.rb_mine);
 
@@ -88,6 +82,12 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 replaceFragment(mMineFragment);
                 break;
 
+            case R.id.rb_ratings:
+                if(null != mRatingsFragment) {
+                    mRatingsFragment = new RatingsFragment();
+                }
+                replaceFragment(mRatingsFragment);
+                break;
 
 
 

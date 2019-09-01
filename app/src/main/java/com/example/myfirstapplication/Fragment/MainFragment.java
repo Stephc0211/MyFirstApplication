@@ -1,22 +1,40 @@
 package com.example.myfirstapplication.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.myfirstapplication.Activity.LoginActivity;
+import com.example.myfirstapplication.Activity.RatingsListActivity;
+import com.example.myfirstapplication.Adapter.RatingsListAdapter;
 import com.example.myfirstapplication.R;
 
 public class MainFragment extends Fragment {
 
+    private TextView mTvRatings;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_main,container,false);
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
+
+
+        mTvRatings = view.findViewById(R.id.tv_ratings);
+        mTvRatings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(view.getContext(), RatingsListActivity.class);
+                view.getContext().startActivity(intent);
+            }
+        });
+        return view;
     }
 
     @Override
