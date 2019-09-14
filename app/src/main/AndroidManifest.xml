@@ -10,10 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Activity.RatingsUploadActivity"></activity>
+        <activity android:name=".Activity.TutorialActivity" />
         <activity
             android:name=".Activity.RatingsListActivity"
             android:label="@string/title_activity_ratings_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activity.RegisterActivity" />
         <activity
             android:name=".Activity.LoginActivity"

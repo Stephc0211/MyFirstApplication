@@ -41,13 +41,15 @@
             />
 
         <RadioButton
-            android:id="@+id/rb_b"
+            android:id="@+id/rb_tutorials"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="B"
+            android:text="教程"
+            android:textSize="10sp"
             android:button="@null"
             android:gravity="center"
+            android:drawableTop="@drawable/tab_tutorials"
             />
 
         <RadioButton
@@ -59,7 +61,7 @@
             android:textSize="10sp"
             android:gravity="center"
             android:button="@null"
-            android:drawableTop="@drawable/icon_user_selected"
+            android:drawableTop="@drawable/tab_user"
             />
 
 

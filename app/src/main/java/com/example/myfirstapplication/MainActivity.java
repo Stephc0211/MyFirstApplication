@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         mRgMain = findViewById(R.id.rg_main);
         mRbHome = findViewById(R.id.rb_home);
         mRbRatings = findViewById(R.id.rb_ratings);
-        mRbSell = findViewById(R.id.rb_b);
+        mRbSell = findViewById(R.id.rb_tutorials);
         mRbMine = findViewById(R.id.rb_mine);
 
         mMineFragment = new MineFragment();

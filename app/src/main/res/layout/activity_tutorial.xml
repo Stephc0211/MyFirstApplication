@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.TutorialActivity">
+
+    <TextView
+        android:id="@+id/tv_tutorials_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_dark_grey"
+        android:gravity="center"
+        android:text="自制教程"
+        android:textColor="@color/color_white"
+        android:textSize="22sp"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/tv_upload_tutorial"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/color_light_light_grey"
+        android:layout_alignParentBottom="true"
+        android:text="+"
+        android:textColor="@color/color_black"
+        android:textSize="30sp"
+        android:gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_tutorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tutorials_title"
+        android:layout_above="@+id/tv_upload_tutorial">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
