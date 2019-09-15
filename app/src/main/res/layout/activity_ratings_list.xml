@@ -25,27 +25,34 @@
         android:layout_height="50dp"
         android:orientation="horizontal">
 
-        <!--TextView
+        <TextView
             android:id="@+id/tv_ratings_hot"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:text="热门"
-            android:textColor="black"
+            android:textColor="@color/color_black"
+            android:gravity="center"
             android:textSize="20sp"
             android:background="@color/color_light_light_grey"
             />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/color_black"/>
 
         <TextView
             android:id="@+id/tv_ratings_mine"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="我的"
-            android:textColor="black"
+            android:textColor="@color/color_black"
             android:textSize="20sp"
             android:background="@color/color_light_light_grey"
-            /-->
+            />
 
     </LinearLayout>
 
