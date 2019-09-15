@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.RatingsUploadActivity"></activity>
+        <activity android:name=".Activity.TutorialUploadActivity"></activity>
+        <activity android:name=".Activity.SellingListActivity" />
+        <activity android:name=".Activity.RatingsUploadActivity" />
         <activity android:name=".Activity.TutorialActivity" />
         <activity
             android:name=".Activity.RatingsListActivity"

@@ -22,12 +22,12 @@
     <TextView
         android:id="@+id/tv_upload_tutorial"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@color/color_light_light_grey"
+        android:layout_height="50dp"
+        android:background="@color/color_dark_grey"
         android:layout_alignParentBottom="true"
         android:text="+"
-        android:textColor="@color/color_black"
-        android:textSize="30sp"
+        android:textColor="@color/color_white"
+        android:textSize="40sp"
         android:gravity="center"/>
 
     <androidx.recyclerview.widget.RecyclerView

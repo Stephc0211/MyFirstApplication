@@ -9,7 +9,7 @@
     tools:context=".Activity.RatingsUploadActivity">
 
     <EditText
-        android:id="@+id/et_upload_text"
+        android:id="@+id/et_upload_tutorial_text"
         android:layout_width="match_parent"
         android:layout_height="130dp"
         android:layout_marginStart="20dp"
@@ -17,8 +17,8 @@
         android:layout_marginTop="30dp"/>
 
 
-    <ImageView
-        android:id="@+id/iv_upload_pic"
+    <TextureView
+        android:id="@+id/txtv_upload_tutorial_pic"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="10dp"
@@ -27,7 +27,7 @@
         android:src="@drawable/pic_volunteer_opportunities"/>
 
     <Button
-        android:id="@+id/btn_upload_btn"
+        android:id="@+id/btn_upload_tutorial_btn"
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_gravity="center"

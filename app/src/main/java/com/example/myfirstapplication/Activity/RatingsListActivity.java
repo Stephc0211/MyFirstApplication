@@ -1,5 +1,6 @@
 package com.example.myfirstapplication.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +23,7 @@ import java.util.List;
 public class RatingsListActivity extends AppCompatActivity {
 
     private ListView mRatingsLv;
+    private TextView mTvUpload;
 
     private RatingsListAdapter ratingsListAdapter;
     private List<RatingsItem> mRatingsList = new ArrayList<>();
@@ -33,8 +35,17 @@ public class RatingsListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ratings_list);
         mRatingsLv = findViewById(R.id.lv_ratings_list);
 
+        mTvUpload = findViewById(R.id.tv_upload_ratings);
+        mTvUpload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RatingsListActivity.this, RatingsUploadActivity.class);
+                startActivity(intent);
+            }
+        });
+
         for (int i = 0; i<20 ; i++) {
-            RatingsItem ratingsItem = new RatingsItem();
+            RatingsItem  ratingsItem = new RatingsItem();
             ratingsItem.setPic1Url(R.drawable.pic_profile_pic);
             ratingsItem.setUserName("Stephanie_" + i);
             ratingsItem.setDescription("description_" + i);
@@ -52,7 +63,8 @@ public class RatingsListActivity extends AppCompatActivity {
         mRatingsLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(RatingsListActivity.this, "you click item" + i + " " + mRatingsList.get(i).getUserName(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(RatingsListActivity.this, "you click item" + i + " " +
+                        mRatingsList.get(i).getUserName(), Toast.LENGTH_SHORT).show();
             }
         });
 

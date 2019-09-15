@@ -23,6 +23,15 @@
         android:layout_width="match_parent"
         android:layout_height="150dp">
 
+        <TextView
+            android:id="@+id/tv_edit_mine"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="编辑"
+            android:textColor="@color/color_dark_grey"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"/>
+
         <ImageView
             android:id="@+id/iv_user_profile_pic"
             android:layout_width="wrap_content"
@@ -179,8 +188,8 @@
         android:text="退出"
         android:textSize="20sp"
         android:textColor="@color/color_black"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:gravity="center"
+
         />
 
 </LinearLayout>
