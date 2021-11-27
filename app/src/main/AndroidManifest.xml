@@ -21,7 +21,8 @@
         <activity android:name=".Activity.RegisterActivity" />
         <activity
             android:name=".Activity.LoginActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
